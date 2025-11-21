@@ -7,6 +7,28 @@
     <link rel="stylesheet" href="style.css">
 </head>
 <body>
+    <nav class="navbar">
+        <div class="nav-container">
+        <a href="index.html" class="nav-logo">
+            Margins & Mayhem
+            <span class="nav-subtitle">by Himanshi Bishnoi</span>
+        </a>
+            <ul class="nav-menu">
+                <li class="nav-item">
+                    <a href="index.html" class="nav-link">Home</a>
+                </li>
+                <li class="nav-item">
+                    <a href="about.html" class="nav-link">About</a>
+                </li>
+                <li class="nav-item">
+                    <a href="leaderboard.html" class="nav-link">Leaderboard</a>
+                </li>
+                <li class="nav-item">
+                    <a href="join-us.html" class="nav-link">Join Us</a>
+                </li>
+            </ul>
+        </div>
+    </nav>
     <!-- HERO SECTION -->
     <section class="wimpy-hero">
         <div class="hero-content">
@@ -20,27 +42,9 @@
         </div>
     </section>
 
-    <!-- ABOUT SECTION -->
-    <section id="about-section">
-        <div class="about-container">
-            <h2 class="about-title">ABOUT THE HUB</h2>
-            <p class="about-text">
-                It all started during one extremely boring math class.<br>
-                Someone (not naming names 👀) began doodling tiny games in the margins instead of paying attention.<br><br>
-                One silly sketch turned into a whole page…<br>
-                which turned into a whole notebook…<br>
-                and now <strong>Margins & Mayhem exists.</strong><br><br>
-                Here, every random idea, half-finished doodle, and “wait, what if we make this a game?” moment gets turned into something you can actually play.<br><br>
-                We go from:<br>
-                💡 “Hmm…” → ✏️ “Let’s draw it…” → 🛠 “Let’s build it…” → 🎉 “Okay, THAT turned out way cooler than expected.”<br><br>
-                And trust me — we’re still doodling new ones. A LOT of new ones.
-            </p>
-        </div>
-    </section>
-
-    <!-- OTHER GAMES SECTION -->
+    <!--GAMES SECTION -->
     <section id="other-games" class="sheet games">
-        <h2 class="section-title">OTHER GAMES TO EXPLORE</h2>
+        <h2 class="section-title">GAMES TO EXPLORE</h2>
 
         <div class="filter-bar">
             <div class="tags">
@@ -91,32 +95,6 @@
         <p class="coming-small">Check back soon for fresh games, weird ideas, and accidental masterpieces.</p>
     </section>
 
-    <!-- LEADERBOARD SECTION -->
-    <section id="leaderboard">
-        <h2 class="leader-title">LEADERBOARD</h2>
-        <p class="leader-intro">
-            The official rankings of who's actually good…<br>
-            and who's just *pressing buttons really fast.*
-        </p>
-        <div class="table-wrapper">
-            <table class="leader-table">
-                <thead>
-                    <tr>
-                        <th>Rank ⭐</th>
-                        <th>Player</th>
-                        <th>Score</th>
-                    </tr>
-                </thead>
-                <tbody>
-                    <tr><td>1</td><td>Himanshi</td><td>1200</td></tr>
-                    <tr><td>2</td><td>SketchMaster</td><td>940</td></tr>
-                    <tr><td>3</td><td>DoodleKing</td><td>870</td></tr>
-                    <tr><td>4</td><td>PencilPro</td><td>800</td></tr>
-                </tbody>
-            </table>
-        </div>
-        <p class="leader-note">(If your name isn’t here… try playing again without rage-quitting.)</p>
-    </section>
 
     <!-- DOODLE GALLERY SECTION -->
     <section class="doodle-gallery">
@@ -179,47 +157,26 @@
         </div>
     </section>
 
-    <!-- CREATOR SECTION -->
-    <section id="creator" class="creator-section">
-        <h2 class="creator-title">About the Creator</h2>
-        <div class="creator-box">
-            <div class="creator-doodle">✏️</div>
-            <p class="creator-text">
-                Hey there! I'm <strong>Himanshi</strong> — the chaotic brain behind all these doodles.<br><br>
-                When I’m not pretending to be productive, I’m usually sketching crooked stars, breaking pencils,
-                or creating games that make zero sense but are VERY fun.<br><br>
-                This whole website? Yeah… it started as a “small project” and then turned into a full-blown doodle universe. Oops.
-            </p>
-            <div class="creator-doodle-bottom">🌟</div>
-        </div>
-    </section>
-
-    <!-- CONTACT SECTION -->
-    <section id="contact" class="contact-section">
-        <h2 class="contact-title">Join the Doodle Club</h2>
-        <div class="contact-box">
-            <p class="contact-intro">
-                Got ideas? Want to yell at me? Or just want to say hi?<br>
-                Write your message below — I promise I read EVERYTHING. (Even the weird stuff.)
-            </p>
-            <form class="contact-form">
-                <label>Your Name</label>
-                <input type="text" placeholder="Greg Heffley... is that you?">
-                <label>Email</label>
-                <input type="email" placeholder="example@mail.com">
-                <label>Your Message</label>
-                <textarea placeholder="Type your doodly thoughts here..."></textarea>
-                <button type="submit">Doodle Me In!</button>
-            </form>
-            <div class="contact-doodle">📬</div>
-        </div>
-    </section>
-
     <!-- FOOTER -->
     <footer class="sticky-footer">
         <div class="note note-yellow"><p class="note-title">Thanks for Visiting!</p><p>Come back for more doodles ✏️</p></div>
         <div class="note note-pink"><p class="note-title">Creator</p><p>Made by <strong>Himanshi</strong></p></div>
         <div class="note note-blue"><p class="note-title">Reminder</p><p>(Don’t forget to hydrate!)</p></div>
     </footer>
+    <script src="https://unpkg.com/lenis@1.3.15/dist/lenis.min.js"></script>
+    <script>
+        const lenis = new Lenis()
+
+        lenis.on('scroll', (e) => {
+        console.log(e)
+        })
+
+        function raf(time) {
+        lenis.raf(time)
+        requestAnimationFrame(raf)
+        }
+
+        requestAnimationFrame(raf)
+    </script>
 </body>
 </html>

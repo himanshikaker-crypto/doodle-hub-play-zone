@@ -1,0 +1,71 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>About</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <nav class="navbar">
+        <div class="nav-container">
+            <a href="index.html" class="nav-logo">
+                Margins & Mayhem
+                <span class="nav-subtitle">by Himanshi Bishnoi</span>
+            </a>
+            <ul class="nav-menu">
+                <li class="nav-item">
+                    <a href="index.html" class="nav-link">Home</a>
+                </li>
+                <li class="nav-item">
+                    <a href="about.html" class="nav-link">About</a>
+                </li>
+                <li class="nav-item">
+                    <a href="leaderboard.html" class="nav-link">Leaderboard</a>
+                </li>
+                <li class="nav-item">
+                    <a href="join-us.html" class="nav-link">Join Us</a>
+                </li>
+            </ul>
+        </div>
+    </nav>
+
+    <!-- CREATOR SECTION -->
+    <section id="creator" class="creator-section">
+        <h2 class="creator-title">About the Creator</h2>
+        <div class="creator-box">
+            <img src="Assets/fonts/Images/Himanshi.png" alt="Creator's photograph" class="creator-photo">
+            <div class="creator-doodle">✏️</div>
+            <p class="creator-text">
+                Hey there! I'm <strong>Himanshi</strong> — the chaotic brain behind all these doodles.<br><br>
+                When I’m not pretending to be productive, I’m usually sketching crooked stars, breaking pencils,
+                or creating games that make zero sense but are VERY fun.<br><br>
+                This whole website? Yeah… it started as a “small project” and then turned into a full-blown doodle universe. Oops.
+            </p>
+            <div class="creator-doodle-bottom">🌟</div>
+        </div>
+    </section>
+
+    <!-- FOOTER -->
+    <footer class="sticky-footer">
+        <div class="note note-yellow"><p class="note-title">Thanks for Visiting!</p><p>Come back for more doodles ✏️</p></div>
+        <div class="note note-pink"><p class="note-title">Creator</p><p>Made by <strong>Himanshi</strong></p></div>
+        <div class="note note-blue"><p class="note-title">Reminder</p><p>(Don’t forget to hydrate!)</p></div>
+    </footer>
+    <script src="https://unpkg.com/lenis@1.3.15/dist/lenis.min.js"></script>
+    <script>
+        const lenis = new Lenis()
+
+        lenis.on('scroll', (e) => {
+        console.log(e)
+        })
+
+        function raf(time) {
+        lenis.raf(time)
+        requestAnimationFrame(raf)
+        }
+
+        requestAnimationFrame(raf)
+    </script>
+</body>
+</html>
